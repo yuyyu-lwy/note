@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="head">
+    <image class="head-l" src="../../images/plus.png"/>
+    <input class="head-r" value="" placeholder="Anything here..." auto-focus bindinput="inputChangeHandle" bindconfirm="addTodoHandle"/>
+  </view>
+
+  <block wx:if="{{todos.length}}">
+  <view class="todos">
+    <view class="item{{item.completed ? 'completed' : ''}}" wx:for="{{todos}}">
+    <icon class="checkbox" type="{{item.completed ? 'success' : 'circle'}}"/>
+    <text class="name"> {{item.name}}</text>
+    <icon class="remove" type="clear" size="16" catchtap="removeTodoHandle" data-index="{{index}}"/>
+    </view>
+  </view>
+ 
+   <view class="foot">
+    <view class="foot-l"></view>
+    <view class="foot-r"></view>
+  </view>
+   </block>
+</view>

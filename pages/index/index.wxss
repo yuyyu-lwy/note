@@ -1,0 +1,56 @@
+/**index.wxss**/
+.head {
+  display: flex; /**伸缩盒子**/
+  border: 1rpx solid #CD853F; /*边框样式 1像素 实线 颜色*/
+  border-radius: 10rpx; /**圆角边框**/
+  margin-top: -80rpx;
+  align-items: center;
+  box-shadow: 0 0 5rpx #e0e0e0; 
+  padding:5rpx 5rpx 15rpx 5rpx; /**四周填充**/
+  width: 500rpx;
+}
+
+.head .head-l{
+  width: 41rpx;
+  height: 41rpx;
+  margin-right: 50rpx;
+}
+
+.head .head-r{
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.todos {
+  border: 1rpx solid #CD853F;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #CD853F;
+  margin: 15rpx;
+  width: 500rpx;
+}
+
+.todos .item {
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #CD853F;
+}
+
+.todos .item:last-child {
+  border-bottom: 0;
+}
+
+.todos .item .checkbox {
+  margin-right: 20rpx;
+}
+
+.todos .item .name {
+  flex: 1;
+  font-size: 30rpx;
+  color: #444;
+}
+
+.todos .item.completed .name {
+  text-decoration: line-through;
+  color: #888;
+}
